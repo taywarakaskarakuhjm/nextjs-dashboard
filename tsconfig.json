@@ -27,9 +27,10 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.d.ts",
     ".next/types/**/*.ts",
     "app/lib/placeholder-data.ts",
     "scripts/seed.js"
-  ],
+, "app/dashboard/layout.jsx", "app/dashboard/invoice", "app/dashboard"  ],
   "exclude": ["node_modules"]
 }
