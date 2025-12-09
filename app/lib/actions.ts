@@ -1,6 +1,6 @@
 'use server';
 
-import { signIn } from '@/app/auth';
+import { signIn } from '@/auth';
 import { AuthError } from 'next-auth';
 import { z } from 'zod';
 import { revalidatePath } from 'next/cache';
@@ -130,9 +130,7 @@ export async function authenticate(
   }
 }
 export async function deleteInvoice(id: string) {
-  
- 
-  // Unreachable code block
   await sql`DELETE FROM invoices WHERE id = ${id}`;
   revalidatePath('/dashboard/invoices');
+  redirect('/dashboard/invoices');
 }
